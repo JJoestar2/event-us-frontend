@@ -1,0 +1,38 @@
+@import '../variables.less';
+
+.main-page {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+        &__btn-panel{
+            display: flex;
+        }
+        &__top {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 30px;
+        }
+    }
+}
+
+.events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-add-event {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 154px;
+    padding: 10px 15px;
+    border: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    margin-right: 15px;
+    border-radius: 20px;
+    transition: 0.2s ease;
+}

@@ -1,0 +1,32 @@
+.modal {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+    background: #fff;
+    z-index: 6;
+    border-radius: 10px;
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(3, 3, 3, .4);
+        z-index: 5;
+    }
+    &-header {
+        padding: 10px 15px;
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &-content {
+        display: flex;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+}
