@@ -2,6 +2,7 @@ import {
     REGISTER_SUCCESS,
     REGISTER_FAIL,
     LOGIN_SUCCESS,
+    UPDATE_USER,
     LOGIN_FAIL,
     LOGOUT,
   } from "../actions/types";
@@ -40,6 +41,12 @@ export default (state = initialState, action) => {
                 ...state,
                 isLoggedIn: false,
                 user: null
+            };
+
+        case UPDATE_USER:
+            return {
+                ...state,
+                user: payload.user
             };
 
         case LOGOUT:

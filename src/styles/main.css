@@ -345,6 +345,15 @@ template {
   font-weight: normal;
   font-style: normal;
 }
+.bold {
+  font-family: 'Roboto-Bold', sans-serif;
+}
+.light {
+  font-family: 'Roboto-Light', sans-serif;
+}
+.regular {
+  font-family: 'Roboto-Regular', sans-serif;
+}
 .header {
   padding: 10px 30px;
   background-color: rgba(23, 37, 45, 0.82);
@@ -385,6 +394,33 @@ template {
   width: 274px;
   top: 41px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.user-profile {
+  position: relative;
+}
+.user-profile-menu {
+  background-color: #fff;
+  position: absolute;
+  margin-top: 10px;
+}
+.user-profile-menu ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-profile-menu ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  margin-left: 10px;
+  transition: 0.2s ease;
+  padding: 15px;
+}
+.user-profile-menu ul li:hover {
+  background-color: #3781f0;
+}
+.user-profile-menu ul li:hover a {
+  color: #fff;
 }
 .sidebar {
   background-color: #333333;
@@ -442,16 +478,8 @@ template {
   border-radius: 50%;
   margin-right: 10px;
 }
-.bold {
-  font-family: 'Roboto-Bold', sans-serif;
-}
-.light {
-  font-family: 'Roboto-Light', sans-serif;
-}
-.regular {
-  font-family: 'Roboto-Regular', sans-serif;
-}
 .event-card {
+  width: 100%;
   max-width: 490px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -557,7 +585,7 @@ template {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-35%, -50%);
+  transform: translate(-50%, -50%);
   background: #fff;
   z-index: 6;
   border-radius: 10px;
@@ -675,7 +703,7 @@ template {
 }
 .main-page-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 100vh;
 }
 .main-page-wrap__btn-panel {
@@ -686,13 +714,18 @@ template {
   justify-content: space-around;
   padding-top: 30px;
 }
+.main-page-wrap__container {
+  width: 100%;
+}
 .events {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .btn-add-event {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-around;

@@ -5,6 +5,7 @@ import {
     LOGIN_FAIL,
     LOGOUT,
     SET_MESSAGE,
+    UPDATE_USER
   } from "./types";
 
  import AuthService from "../services/auth-service";
@@ -43,6 +44,33 @@ import {
      return Promise.reject();
    });
  };
+
+ export const updateUser = (id, username, surname, city, phone, dateBirth, email) => (dispatch) => {
+  return AuthService.update(id, username, surname, city, phone, dateBirth, email)
+  .then((response) => {
+    dispatch({
+      type: UPDATE_USER,
+      payload: { user: response } 
+    });
+ 
+   return Promise.resolve();
+  },
+  (error) => {
+    const message =
+      (error.response &&
+        error.response.data &&
+        error.response.data.message) ||
+      error.message ||
+      error.toString();
+
+    dispatch({
+      type: SET_MESSAGE,
+      payload: message,
+    });
+
+    return Promise.reject();
+  });
+};
 
 
  export const login = (email, password) => (dispatch) => {

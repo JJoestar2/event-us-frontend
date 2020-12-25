@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
 import {NavLink} from 'react-router-dom';
 
 import Logo from '../logo';
 import UserInfo from '../user-info';
 import {List, ListItem} from '../common';
 import SearchForm from './search-from';
+
+import { logout } from "../../actions/auth";
+
+import { ReactComponent as UserIcon } from '../../images/person_24px.svg';
+import { ReactComponent as SettingsIcon } from '../../images/brightness_high_24px.svg';
+import { ReactComponent as LogoutIcon } from '../../images/keyboard_tab_24px.svg';
 
 
 const Header = (props) => {
@@ -14,6 +21,11 @@ const Header = (props) => {
         {id:3, name: "Billy Herringhton"},
         {id:4, name: "Van Darkholme"}
     ];
+    const dispatch = useDispatch();
+    const [show, setShow] = useState(false);
+    const Logout = () => {
+        dispatch(logout());
+    }
     return (
         <header className="header">
             <div className="header-container">
@@ -38,7 +50,35 @@ const Header = (props) => {
                         </div>
                     </div>
                 </div>
-                <UserInfo name={props.user.username} surname={props.user.surname} />
+                <div className="user-profile" onClick={()=> setShow(!show)}>
+                    <UserInfo name={props.user.username} surname={props.user.surname} />
+                    { 
+                        show 
+                        ? <div className="user-profile-menu">
+                            <ul>
+                                <li>                    
+                                    <UserIcon />
+                                    <NavLink to="/profile">
+                                        Профіль
+                                    </NavLink>
+                                </li>   
+                                <li>  
+                                    <SettingsIcon />
+                                    <NavLink to="/settings">
+                                        Налаштування
+                                    </NavLink>
+                                </li>  
+                                <li onClick={Logout}> 
+                                    <LogoutIcon />
+                                    <NavLink to="/">
+                                        Вихід
+                                    </NavLink>
+                                </li> 
+                            </ul>
+                         </div>
+                        : null
+                    }
+                </div>
             </div>
         </header>
     );

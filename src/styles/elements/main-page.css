@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("fonts/Roboto-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/Roboto-Light.otf") format("opentype"), /* Open Type Font */ url("fonts/Roboto-Light.svg") format("svg"), /* Legacy iOS */ url("fonts/Roboto-Light.ttf") format("truetype"), /* Safari, Android, iOS */ url("fonts/Roboto-Light.woff") format("woff"), /* Modern Browsers */ url("fonts/Roboto-Light.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/Roboto-Regular.otf") format("opentype"), /* Open Type Font */ url("fonts/Roboto-Regular.svg") format("svg"), /* Legacy iOS */ url("fonts/Roboto-Regular.ttf") format("truetype"), /* Safari, Android, iOS */ url("fonts/Roboto-Regular.woff") format("woff"), /* Modern Browsers */ url("fonts/Roboto-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("fonts/Roboto-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/Roboto-Bold.otf") format("opentype"), /* Open Type Font */ url("fonts/Roboto-Bold.svg") format("svg"), /* Legacy iOS */ url("fonts/Roboto-Bold.ttf") format("truetype"), /* Safari, Android, iOS */ url("fonts/Roboto-Bold.woff") format("woff"), /* Modern Browsers */ url("fonts/Roboto-Bold.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+.bold {
+  font-family: 'Roboto-Bold', sans-serif;
+}
+.light {
+  font-family: 'Roboto-Light', sans-serif;
+}
+.regular {
+  font-family: 'Roboto-Regular', sans-serif;
+}
+.main-page-wrap {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.main-page-wrap__btn-panel {
+  display: flex;
+}
+.main-page-wrap__top {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+.main-page-wrap__container {
+  width: 100%;
+}
+.events {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn-add-event {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 154px;
+  padding: 10px 15px;
+  border: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  margin-right: 15px;
+  border-radius: 20px;
+  transition: 0.2s ease;
+}

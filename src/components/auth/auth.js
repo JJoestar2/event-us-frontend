@@ -81,12 +81,10 @@ const Auth = (props) => {
                     validations={[required]} />
 
                 <div className="form-group">
-                    <button className="btn btn-primary btn-block" disabled={loading}>
                         {loading && (
                             <span className="spinner-border spinner-border-sm"></span>
                         )}
-                        <span>Login</span>
-                    </button>
+                         <button type="submit" className="btn-send" disabled={loading}>Підтвердити</button>
                 </div>
 
                 {message && (

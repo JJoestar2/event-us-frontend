@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route, Redirect } from "react-router-dom";
 
 import '../../styles/main.css';
 
@@ -18,11 +18,14 @@ const App = () => {
     <div className="App">
             <Router history={history}>
                 <Switch>
+                  <Route exact path="/">
+                      <Redirect to="/auth" />
+                  </Route>
                   <Route path="/register" exact component={RegisterPage} />
                   <Route path="/auth" exact component={AuthPage} />   
                   <Route path="/main" exact component = {MainPage} />
                   <Route path="/profile" exact component = {UserPage} />
-                  <Route path="/event-detail" exact component = {EventInfo} />
+                  <Route path="/event-detail/:id" exact component = {EventInfo} />
                   <Route path="/settings" exact component = {SettingsPage} />
                 </Switch>
           </Router>

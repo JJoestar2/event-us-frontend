@@ -9,7 +9,7 @@ const Modal = (props) => {
                 <div className="modal-header">
                     <div className="modal-header-container"> 
                         <span>{props.title}</span>
-                        <span>♂</span>
+                        <span onClick={props.close}>x</span>
                     </div>
                 </div> 
                 <div className="modal-content">

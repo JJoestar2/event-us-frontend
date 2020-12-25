@@ -58,7 +58,7 @@ const Register = () => {
   const handleInputChange = e => {
         const {name, value} = e.target
         setValues({...values, [name]: value});
-    }
+  }
 
     const handleRegister = (e) => {
         e.preventDefault();

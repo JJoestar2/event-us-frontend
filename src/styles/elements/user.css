@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.user-name {
+  font-size: 1.1rem;
+}
+.user-avatar {
+  display: inline-block;
+  background-color: red;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
